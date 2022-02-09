@@ -1,0 +1,24 @@
+<div class="ui-bootstrap">
+  <div [class]="listItemsClass">
+    <div class="list__container">
+      <div class="list__row list__row__header list__column">
+        <span
+          *ngFor="let header of headers"
+          class="header-cell"
+          [itemListSorter]="rows"
+          data-order="desc"
+          [attr.data-name]="header.key"
+        >
+          {{ header.label }}</span
+        >
+      </div>
+      <div *ngFor="let row of rows" class="list__row list__column">
+        <conte-dw-cell-items
+          *ngFor="let cell of row.data"
+          class="body-cell"
+          [inputCell]="cell"
+        ></conte-dw-cell-items>
+      </div>
+    </div>
+  </div>
+</div>

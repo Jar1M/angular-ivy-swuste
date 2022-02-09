@@ -1,0 +1,19 @@
+@import '../scss/variables-theme';
+.cell {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  &__link {
+    color: $light-blue-solid-100;
+    font-weight: $bold-font-weight;
+    text-decoration: none;
+
+    &:hover {
+      color: $blue-solid-100;
+    }
+  }
+  &__icon {
+    width: 2rem;
+    height: auto;
+  }
+}

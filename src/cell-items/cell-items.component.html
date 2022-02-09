@@ -1,0 +1,39 @@
+<span *ngIf="inputCell.type === dataType.link && asLink(inputCell.value) as val"
+  ><a
+    [href]="val.href"
+    class="cell__link"
+    [target]="val?.redirect?.newWindow ? '_blank' : ''"
+    >{{ val.text }}</a
+  ></span
+>
+
+<span
+  *ngIf="inputCell.type === dataType.date && asDate(inputCell.value) as val"
+  class="cell"
+  >{{ val | date }}</span
+>
+
+<span
+  *ngIf="
+    inputCell.type === dataType.currency && asCurrency(inputCell.value) as val
+  "
+  class="cell"
+  >{{ val | currency }}</span
+>
+
+<span *ngIf="inputCell.type === dataType.string" class="cell">{{
+  inputCell.value
+}}</span>
+
+<span
+  *ngIf="inputCell.type === dataType.button && asButton(inputCell.value) as val"
+  class="cell"
+  ><button>
+    {{ val.label }}
+  </button></span
+>
+<span
+  *ngIf="inputCell.type === dataType.icon && asIcon(inputCell.value) as val"
+  class="cell"
+  ><img [src]="val.src" class="cell__icon"
+/></span>

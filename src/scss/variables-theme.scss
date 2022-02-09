@@ -1,0 +1,312 @@
+/* ------------------------ NEW VARIABLES - UI-BOOTSTRAP ------------------------  */
+
+//NEW COLORS
+$neutral-white: #ffffff;
+$blue-solid-100: #00558c;
+$blue-gradient-default: linear-gradient(60deg, #104d87, #1e77b4);
+$blue-gradient-darker: linear-gradient(60deg, #00305e, #0b73ba);
+$blue-gradient-default-top: linear-gradient(to top, #104d87, #1e77b4);
+$blue-gradient-darker-top: linear-gradient(to top, #00305e, #0b73ba);
+$blue-solid-80: #3377a3;
+$blue-solid-60: #6699ba;
+$blue-solid-40: #99bbd1;
+$blue-solid-20: #ccdde8;
+$blue-solid-10: #e6eef3;
+$blue-solid-05: #f2f6f9;
+$blue-solid-03: #f7f9fb;
+$light-blue-solid-100: #4dabff;
+$light-blue-gradient-default: linear-gradient(to top, #4dabff, #198df5);
+$light-blue-gradient-darker: linear-gradient(to top, #095eab, #198df5);
+$light-blue-solid-75: #7ac0ff;
+$light-blue-solid-40: #b8ddff;
+$light-blue-solid-20: #dbeeff;
+$light-blue-solid-10: #f1f8ff;
+$light-blue-solid-5: #f9fcff;
+$light-orange-1: #ffaf2b;
+$light-orange-100: #ff9d00;
+$light-orange-75: #ffb43c;
+$light-orange-10: #fff7ea;
+$light-red-75: #fd5f7a;
+$green-gradient-default: linear-gradient(60deg, #40c248, #239329);
+$green-gradient-darker: linear-gradient(60deg, #40c248, #136e17);
+$green-solid-100-valid: #50bf4d;
+$green-solid-100: #4ab047;
+$green-solid-75: #77c475;
+$green-solid-40: #b7dfb5;
+$green-solid-20: #dbefda;
+$green-solid-10: #eff8ee;
+$green-solid-5: #f8fcf8;
+$red-solid-100: #c8102e;
+$red-solid-20: #f9e7ea;
+$red-solid-10: #fcf3f5;
+$neutral-black: #000000;
+$neutral-black-100: #303030;
+$neutral-black-92: #484848;
+$neutral-black-75: #646464;
+$neutral-black-50: #8a8a8a;
+$neutral-black-35: #b7b7b7;
+$neutral-black-15: #e0e0e0;
+$neutral-black-10: #ebebeb;
+$neutral-black-5: #f4f4f4;
+$neutral-black-3: #f8f8f8;
+$orange: #ffc159;
+$orange-10: #fff3df;
+$orange-100: #d18100;
+$brown-grey: #929292;
+
+// FONT SIZE
+$h1: 64px;
+$h2: 40px;
+$h3: 32px;
+$h4: 28px;
+$h5: 26px;
+$h6: 24px;
+$small-subtitle: 20px;
+$big-body: 18px;
+$body: 16px;
+$small-body: 14px;
+$caption: 12px;
+$small-caption: 10px;
+
+// LINE HEIGHT
+$h1-line-height: 110%;
+$h2-line-height: 120%;
+$h3-line-height: 130%;
+$h4-line-height: 140%;
+$h5-line-height: 140%;
+$h6-line-height: 140%;
+$small-subtitle-line-height: 150%;
+$big-body-line-height: 150%;
+$body-line-height: 160%;
+$small-body-line-height: 160%;
+$caption-line-height: 160%;
+$small-caption-line-height: 140%;
+
+// LAYOUT
+$grid-gutter-width: 20px;
+
+// BREAKPOINTS
+$xxs: 370px;
+$xs: 480px;
+$sm: 640px;
+//at 767px Start Mobile Version
+$md-1: 767px;
+$md: 768px;
+$xmd: 951px;
+$lg: 1024px;
+$xl: 1140px;
+$xxl: 1216px;
+
+$grid-breakpoints: (
+  xxs: 0,
+  xss: 375px,
+  xs: 481px,
+  sm: 641px,
+  md-1: 768px,
+  md: 769px,
+  xmd: 951px,
+  lg: 1025px,
+  xl: 1141px,
+  xxl: 1216px,
+  xxxl: 1280px,
+);
+
+$container-max-widths: (
+  xs: 440px,
+  sm: 600px,
+  md: 720px,
+  lg: 960px,
+  xl: 1080px,
+);
+
+// GLOBAL VARIABLES
+$global-font-family: 'Lato', sans-serif;
+
+//FONT WEIGHT & STYLE
+$bold-font-weight: 700;
+$light-font-weight: 300;
+$italic-font-style: italic;
+
+//POSITION PROPERTY
+$center: 0 auto;
+
+// //SPECIAL
+$blue-special: #0f4884;
+$light-blue-special: #4dabff;
+$blue-border-special: #3377a3;
+$gray-border-special: #99bbd1;
+$red-error-special: #c8102e;
+$green-checked-special: #4ab047;
+$blue-title: #00558c;
+$gray-special: #646464;
+$black-special-3: #f8f8f8;
+$black-special-5: #f4f4f4;
+$black-special-10: #ebebeb;
+$black-special-15: #e0e0e0;
+$black-special-35: #b7b7b7;
+$black-special-65: #646464;
+$black-special-92: #484848;
+$black-special: #303030;
+$light-blue-special: #e6eef3;
+$not-expired-green: #4ab047;
+$not-expired-yellow: #f29d0a;
+$expired-red: #c8102e;
+$light-blue-special-5: #f9fcff;
+$light-blue-special-20: #ccdde8;
+
+// $blue: #00558c;
+// $gray-special: #646464;
+
+/* ------------------------ OLD VARIABLES - UI KIT ------------------------  */
+
+//COLOR
+// $white: #ffffff;
+$twilight-blue: #0f4683;
+$pale-grey: #f1f8ff;
+// $pale-grey-three: #eef5fe;
+// $light-grey-blue-20: rgba(163, 173, 184, 0.2);
+// $background: #f9fcff;
+$soft-blue: #4dabff;
+// $brown-grey: #929292;
+// $blue: #1f5eca;
+// $blue-blue-10: rgba($blue, 0.1);
+// $blue-blue-25: rgba($blue, 0.25);
+$greyish-brown: #484848;
+// $greyish-brown-two: #545454;
+// $very-light-blue: #e6ecf2;
+// $marine: #06255b;
+// $mid-green: #4fb054;
+// $lighter-green: #80d585;
+// $cobalt-20: rgba(27, 59, 127, 0.2);
+$mid-blue: #1e77b4;
+// $light-navy: #104d87;
+// $very-light-pink-2: #dedede;
+// $ice-blue: #e9f3fe;
+$very-light-pink: #efefef;
+// $mid-green-two: #4aaf48;
+// $light-peach: #b6b6b6;
+// $cherry-red: #ee0029;
+// $pale-grey-two: #f8fbfe;
+// $light-blue: #8ecaff;
+// $cherry: #d1072a;
+$light-green: #4ab047;
+$soft-grey: #777777;
+
+// //UIKIT GRID GENERAL
+// $container-max-width: 1200px;
+// $container-small-max-width: 980px;
+// $container-padding-horizontal: 20px;
+// $global-gutter: 20px;
+// $global-medium-gutter: 20px;
+// $global-small-gutter: 10px;
+
+//UIKIT BREAKPOINT MEDIA
+$breakpoint-small: 480px;
+// $breakpoint-medium: 640px;
+$breakpoint-large: 768px;
+// $breakpoint-xlarge: 1024px;
+// //custom
+$breakpoint-xxsmall: 370px;
+// $breakpoint-xxsmall-max: ($breakpoint-xxsmall - 1);
+$breakpoint-mobile-max: ($breakpoint-large - 1); //Start Mobile Version
+$breakpoint-xxlarge: 1140px;
+// $breakpoint-xxlarge-max: ($breakpoint-xxlarge - 1);
+
+// //UIKIT GLOBAL
+// $global-color: $twilight-blue;
+// $global-background: $background;
+// $global-emphasis-color: $twilight-blue;
+// $global-link-color: $twilight-blue;
+// $global-link-hover-color: $twilight-blue;
+// $global-primary-background: $twilight-blue;
+// $base-heading-font-family: 'Lato', sans-serif;
+// $base-heading-font-weight: bold;
+// $base-heading-color: $twilight-blue;
+// $base-link-hover-text-decoration: none;
+// $global-medium-margin: 20px;
+// $global-large-margin: 40px;
+// $text-success-color: $mid-green;
+// $text-danger-color: $cherry-red;
+
+// //UIKIT ANIMATION
+// $animation-duration: 0.8s;
+// $animation-fade-duration: 1s;
+
+// //UIKIT BUTTON
+// $button-font-size: 22px;
+// $button-line-height: 48px;
+// $button-padding-horizontal: 5px;
+// $button-small-line-height: 45px;
+// $button-small-font-size: 20px;
+// $button-primary-background: $light-navy;
+// $button-primary-color: $white;
+// $button-primary-hover-background: inherit;
+// $button-primary-hover-color: $white;
+// $button-primary-active-background: inherit;
+// $button-primary-active-color: $white;
+// $button-secondary-background: $mid-green;
+// $button-secondary-color: $white;
+// $button-secondary-hover-background: inherit;
+// $button-secondary-hover-color: $white;
+// $button-secondary-active-background: inherit;
+// $button-secondary-active-color: $white;
+// $button-disabled-color: $white;
+
+// //UIKIT NAVBAR
+// $navbar-nav-item-height: 50px;
+// $navbar-nav-item-color: $global-color;
+// $navbar-nav-item-font-size: 14px;
+
+// //UIKIT CARD
+// $card-default-background: $white;
+// $card-large-body-padding-vertical-l: 40px;
+// $card-large-body-padding-horizontal-l: 40px;
+// $card-small-header-padding-horizontal: 0;
+// $card-small-header-padding-vertical: 0;
+// $card-small-footer-padding-horizontal: 0;
+// $card-small-footer-padding-vertical: 0;
+
+// //UIKIT LIST
+// $list-divider-margin-top: 0;
+// $list-divider-border: rgba($twilight-blue, 0.1);
+
+// //UIKIT FORM
+// $form-radio-size: 20px;
+// $form-radio-margin-top: -3px;
+// $form-radio-background: $white;
+// $form-radio-checked-background: $white;
+// $form-radio-checked-focus-background: $white;
+// $form-height: 38px;
+// $form-line-height: 38px;
+// $form-padding-horizontal: 10px;
+// $form-padding-vertical: 10px;
+// $form-background: $white;
+// $form-focus-background: $white;
+// $form-disabled-background: $white;
+// $form-disabled-color: $light-peach;
+// $form-placeholder-color: $light-peach;
+// $form-danger-color: $cherry-red;
+// $form-success-color: $mid-green;
+
+// //UIKIT MODAL
+// $modal-background: rgba($twilight-blue, 0.6);
+// $modal-padding-vertical-s: 30px;
+// $modal-padding-vertical: 30px;
+// $modal-dialog-width: 550px;
+// $modal-dialog-background: $white;
+// $modal-body-padding-horizontal: 15px;
+// $modal-body-padding-vertical: 15px;
+// $modal-footer-background: transparent;
+// $modal-footer-padding-horizontal: 15px;
+// $modal-footer-padding-vertical: 15px;
+// $modal-title-font-size: 22px;
+// $modal-title-line-height: normal;
+// $modal-close-position: 15px;
+
+// //UIKIT TABS
+// $tab-margin-horizontal: 0;
+// $tab-item-padding-horizontal: 5px;
+// $tab-item-padding-vertical: 14px;
+// $tab-margin-horizontal: 50px;
+// $tab-item-color: $twilight-blue;
+// $tab-item-active-color: $soft-blue;
