@@ -18,17 +18,9 @@ export class SortableListItemsDirective implements AfterViewInit {
 
   constructor(private renderer: Renderer2, private targetElement: ElementRef) {}
   ngAfterViewInit(): void {
-    const child = this.renderer.createElement('img');
-    child.setAttribute(
-      'src',
-      'https://www.pinclipart.com/picdir/middle/130-1303175_navigate-up-arrow-comments-icon-arrow-up-svg.png'
-    );
-    child.setAttribute('class', 'arrow-up');
-    this.renderer.insertBefore(
-      this.targetElement.nativeElement.parent,
-      child,
-      this.targetElement.nativeElement.nextSibling
-    );
+    if (this.isSortable) {
+      this.addSorterArrows();
+    }
   }
 
   @HostListener('click')
@@ -43,5 +35,38 @@ export class SortableListItemsDirective implements AfterViewInit {
       let newOrder: string = order === 'desc' ? 'asc' : 'desc';
       elem.setAttribute('data-order', newOrder);
     }
+  }
+
+  private addSorterArrows() {
+    const arrowUpSrc =
+      'https://www.pinclipart.com/picdir/middle/130-1303175_navigate-up-arrow-comments-icon-arrow-up-svg.png';
+
+    const arrowDownSrc =
+      'https://www.clipartmax.com/png/middle/442-4426111_down-soul-spirit-icon-arrow-down-icon-svg.png';
+
+    // add cursor pointer
+    this.renderer.setStyle(
+      this.targetElement.nativeElement,
+      'cursor',
+      'pointer'
+    );
+    //arrow up
+    const imgUp = this.renderer.createElement('img');
+    this.renderer.setAttribute(imgUp, 'src', arrowUpSrc);
+    this.renderer.addClass(imgUp, 'arrows__icon');
+    this.renderer.addClass(imgUp, 'arrows__icon__up');
+    //arrow down
+    const imgDown = this.renderer.createElement('img');
+    this.renderer.setAttribute(imgDown, 'src', arrowDownSrc);
+    this.renderer.addClass(imgDown, 'arrows__icon');
+    this.renderer.addClass(imgDown, 'arrows__icon__down');
+
+    //append span
+    const spanArrow = this.renderer.createElement('span');
+    this.renderer.appendChild(spanArrow, imgUp);
+    this.renderer.appendChild(spanArrow, imgDown);
+    this.renderer.addClass(spanArrow, 'arrows__container');
+
+    this.renderer.appendChild(this.targetElement.nativeElement, spanArrow);
   }
 }
