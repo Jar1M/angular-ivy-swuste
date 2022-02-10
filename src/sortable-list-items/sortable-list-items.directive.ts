@@ -5,14 +5,12 @@ import {
   Input,
   Renderer2,
 } from '@angular/core';
-import { DataKeyEnum, ListItemsRow } from '../list-items/list-items.model';
-import { ItemListSorter } from './item-list-sorter.class';
 
 @Directive({
-  selector: '[listSorter]',
+  selector: '[sortable-list]',
 })
-export class ItemListSorterDirective {
-  @Input() listSorter: ListItemsRow[];
+export class SortableListItemsDirective {
+  @Input() sortableList: ListItemsRow[];
 
   constructor(private renderer: Renderer2, private targetElement: ElementRef) {}
 

@@ -1,14 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { CellItemsModule } from '../cell-items/cell-items.module';
-import { Sort } from '../sort/sort.class';
-import { SortDirective } from '../sort/sort.directive';
-import { SortModule } from '../sort/sort.module';
+import { SortableListItemsDirective } from '../sortable-list-items.directive';
 import { ListItemsComponent } from './list-items.component';
 
 @NgModule({
-  declarations: [ListItemsComponent],
-  imports: [CommonModule, CellItemsModule, SortModule],
+  declarations: [ListItemsComponent, SortableListItemsDirective],
+  imports: [CommonModule, CellItemsModule, ItemListSorterModule],
   exports: [ListItemsComponent],
 })
 export class ListItemsModule {}

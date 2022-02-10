@@ -3,7 +3,7 @@ import {
   ListItemsLink,
   ListItemsRow,
   SchemaDataTypeEnum,
-} from '../list-items/list-items.model';
+} from './list-items/list-items.model';
 
 export class ItemListSorter {
   private sortOrder = 1;
