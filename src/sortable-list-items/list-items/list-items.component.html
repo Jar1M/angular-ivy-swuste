@@ -5,8 +5,9 @@
         <span
           *ngFor="let header of headers"
           class="header-cell"
-          sortable-list="false"
+          sortable-list
           [rows]="rows"
+          [isSortable]="header.sortable"
           data-order="desc"
           [attr.data-name]="header.key"
         >

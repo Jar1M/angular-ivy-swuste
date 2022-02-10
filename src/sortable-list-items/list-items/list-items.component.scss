@@ -1,6 +1,9 @@
 @import '../../scss/variables-theme';
 
 $bg-color: white;
+.arrow-up {
+  width: 5px;
+}
 .list {
   &__container {
     display: grid;

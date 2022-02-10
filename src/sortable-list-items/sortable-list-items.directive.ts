@@ -9,26 +9,37 @@ import { DataKeyEnum, ListItemsRow } from './list-items/list-items.model';
 import { ItemListSorter } from './sortable-list-items.class';
 
 @Directive({
-  selector: '[sortable-list=true]',
+  selector: '[sortable-list]',
 })
 export class SortableListItemsDirective {
   @Input() rows: ListItemsRow[];
+  @Input() isSortable: boolean;
 
-  constructor(private renderer: Renderer2, private targetElement: ElementRef) {}
+  constructor(private renderer: Renderer2, private targetElement: ElementRef) {
+    const child = document.createElement('img');
+    child.setAttribute(
+      'src',
+      'https://www.pinclipart.com/picdir/middle/130-1303175_navigate-up-arrow-comments-icon-arrow-up-svg.png'
+    );
+    child.setAttribute('class', 'arrow-up');
+    this.renderer.insertBefore(
+      this.targetElement.nativeElement,
+      child,
+      this.renderer.nextSibling
+    );
+  }
 
   @HostListener('click')
   sortData() {
     const sorter: ItemListSorter = new ItemListSorter();
 
     const elem: any = this.targetElement.nativeElement;
-
     const order: string = elem.getAttribute('data-order');
-
     const property: DataKeyEnum = elem.getAttribute('data-name');
-
-    this.rows.sort(sorter.startSort(property, order));
-
-    let newOrder: string = order === 'desc' ? 'asc' : 'desc';
-    elem.setAttribute('data-order', newOrder);
+    if (this.isSortable) {
+      this.rows.sort(sorter.startSort(property, order));
+      let newOrder: string = order === 'desc' ? 'asc' : 'desc';
+      elem.setAttribute('data-order', newOrder);
+    }
   }
 }
