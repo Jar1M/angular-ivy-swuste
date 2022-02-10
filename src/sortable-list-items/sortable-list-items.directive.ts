@@ -12,7 +12,7 @@ import { ItemListSorter } from './sortable-list-items.class';
   selector: '[sortable-list=true]',
 })
 export class SortableListItemsDirective {
-  @Input('rows') rows: ListItemsRow[];
+  @Input() rows: ListItemsRow[];
 
   constructor(private renderer: Renderer2, private targetElement: ElementRef) {}
 
