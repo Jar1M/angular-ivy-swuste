@@ -1,4 +1,5 @@
 import {
+  AfterViewInit,
   Directive,
   ElementRef,
   HostListener,
@@ -11,21 +12,22 @@ import { ItemListSorter } from './sortable-list-items.class';
 @Directive({
   selector: '[sortable-list]',
 })
-export class SortableListItemsDirective {
+export class SortableListItemsDirective implements AfterViewInit {
   @Input() rows: ListItemsRow[];
   @Input() isSortable: boolean;
 
-  constructor(private renderer: Renderer2, private targetElement: ElementRef) {
-    const child = document.createElement('img');
+  constructor(private renderer: Renderer2, private targetElement: ElementRef) {}
+  ngAfterViewInit(): void {
+    const child = this.renderer.createElement('img');
     child.setAttribute(
       'src',
       'https://www.pinclipart.com/picdir/middle/130-1303175_navigate-up-arrow-comments-icon-arrow-up-svg.png'
     );
     child.setAttribute('class', 'arrow-up');
     this.renderer.insertBefore(
-      this.targetElement.nativeElement,
+      this.targetElement.nativeElement.parent,
       child,
-      this.renderer.nextSibling
+      this.targetElement.nativeElement.nextSibling
     );
   }
 
