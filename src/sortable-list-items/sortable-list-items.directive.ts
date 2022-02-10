@@ -5,12 +5,14 @@ import {
   Input,
   Renderer2,
 } from '@angular/core';
+import { DataKeyEnum, ListItemsRow } from './list-items/list-items.model';
+import { ItemListSorter } from './sortable-list-items.class';
 
 @Directive({
-  selector: '[sortable-list]',
+  selector: '[sortable-list=true]',
 })
 export class SortableListItemsDirective {
-  @Input() sortableList: ListItemsRow[];
+  @Input() rows: ListItemsRow[];
 
   constructor(private renderer: Renderer2, private targetElement: ElementRef) {}
 
@@ -24,7 +26,7 @@ export class SortableListItemsDirective {
 
     const property: DataKeyEnum = elem.getAttribute('data-name');
 
-    this.listSorter.sort(sorter.startSort(property, order));
+    this.rows.sort(sorter.startSort(property, order));
 
     let newOrder: string = order === 'desc' ? 'asc' : 'desc';
     elem.setAttribute('data-order', newOrder);

@@ -6,7 +6,7 @@ import { ListItemsComponent } from './list-items.component';
 
 @NgModule({
   declarations: [ListItemsComponent, SortableListItemsDirective],
-  imports: [CommonModule, CellItemsModule, ItemListSorterModule],
+  imports: [CommonModule, CellItemsModule],
   exports: [ListItemsComponent],
 })
 export class ListItemsModule {}
